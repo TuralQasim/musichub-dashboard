@@ -12,3 +12,7 @@
   max-width: 95%;
   margin: 0 auto;
 }
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: teal;
+}

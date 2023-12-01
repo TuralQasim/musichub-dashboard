@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./auth.css";
+import "./register.css";
 import { Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+
 const schema = Yup.object({
   login: Yup.string()
     .min(5, "Minimum 5 symbols")
@@ -14,7 +15,7 @@ const schema = Yup.object({
     .max(15, "Maximum 15 symbols")
     .required("Enter password"),
 });
-const Auth = () => {
+const Register = () => {
   const [auth, setAuth] = useState({});
   return (
     <Formik
@@ -25,7 +26,7 @@ const Auth = () => {
       validationSchema={schema}
       onSubmit={async (values) => {
         const { data } = await axios.post(
-          "https://api.music-hub.ru/auth/local",
+          "https://api.music-hub.ru/account/create",
           {
             username: values.username,
             password: values.password,
@@ -37,10 +38,11 @@ const Auth = () => {
           }
         );
         !!data && setAuth(data);
+        console.log(data);
       }}
     >
       <Form className="auth_form">
-        <h1>Authorization</h1>
+        <h1>Registration</h1>
         <label htmlFor="">
           <p>Username</p>
           <Field
@@ -60,12 +62,12 @@ const Auth = () => {
           <ErrorMessage className="authError" name="password" />
         </label>
         <div className="auth_btns">
-          <button type="submit">Login</button>
-          <Link to="/register">Register</Link>
+          <button type="submit">Create account</button>
+          <Link to="/auth">Login</Link>
         </div>
       </Form>
     </Formik>
   );
 };
 
-export default Auth;
+export default Register;

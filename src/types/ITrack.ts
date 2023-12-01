@@ -1,6 +1,6 @@
 import { TrackFilter } from "./ITrackFilter";
 
-export interface Track {
+export interface ITrack {
   id: string;
   total_plays: string;
   recent_plays: string;

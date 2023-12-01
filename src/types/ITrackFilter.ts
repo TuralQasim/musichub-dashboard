@@ -1,1 +1,1 @@
-export type TrackFilter = Array<{ id: string; name: string }>;
+export type ITrackFilter = Array<{ id: string; name: string }>;

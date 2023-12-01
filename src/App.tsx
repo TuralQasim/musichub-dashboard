@@ -4,6 +4,8 @@ import Loading from "./components/Loading/Loading";
 import Header from "./components/header/Header";
 const Home = lazy(() => import("./pages/home/Home"));
 const Auth = lazy(() => import("./pages/auth/Auth"));
+const Register = lazy(() => import("./pages/register/Register"));
+
 import "./App.css";
 type ComponentType = React.FC<{}>;
 const App = () => {
@@ -15,6 +17,10 @@ const App = () => {
     {
       path: "/auth",
       element: <Auth />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
     },
   ];
 
