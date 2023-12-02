@@ -86,9 +86,14 @@
   color: #fff;
   background-color: teal;
 }
-.auth_form h1 {
+.auth_form h2 {
   font-size: 36px;
   font-weight: 600;
   color: teal;
   margin: 0 auto;
+}
+.auth_form label span {
+  font-size: 16px;
+  font-weight: 500;
+  color: red;
 }
