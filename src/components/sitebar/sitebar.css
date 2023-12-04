@@ -1,0 +1,48 @@
+.sitebar {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 10px -1px 5px -6px rgba(255, 255, 255, 0.43);
+  -webkit-box-shadow: 10px -1px 5px -6px rgba(255, 255, 255, 0.43);
+  -moz-box-shadow: 10px -1px 5px -6px rgba(255, 255, 255, 0.43);
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sitebar_title:last-of-type {
+  margin-top: 60px;
+}
+.sitebar_title {
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.sitebar_title svg {
+  font-size: 28px;
+}
+.sitebar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.sitebar ul a {
+  font-size: 22px;
+  font-weight: 500;
+  color: teal;
+  transition: 0.4s;
+}
+.sitebar ul a:hover {
+  border-bottom: 1px solid teal;
+}

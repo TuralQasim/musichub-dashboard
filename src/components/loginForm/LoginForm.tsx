@@ -29,20 +29,12 @@ const LoginForm: React.FC = () => {
     },
     validationSchema: schema,
     onSubmit: async (values) => {
-      const response = await axios.post(
-        "https://api.music-hub.ru/auth/local",
-        {
-          username: values.username,
-          password: values.password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        }
-      );
+      const response = await axios.post("https://api.music-hub.ru/auth/local", {
+        username: values.username,
+        password: values.password,
+      });
       const data: IAuth = await response.data;
+      await localStorage.setItem("username", data.username);
       try {
         dispatch(setAuth(true));
         dispatch(setUser(data.username));

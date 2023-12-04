@@ -1,0 +1,15 @@
+.home_page {
+  width: calc(100% - 200px);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+  align-items: center;
+}
+.home_page > h2 {
+  font-size: 54px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+}

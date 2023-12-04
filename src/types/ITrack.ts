@@ -1,4 +1,7 @@
-import { TrackFilter } from "./ITrackFilter";
+type standartItem = {
+  id: number;
+  name: string;
+};
 
 export interface ITrack {
   id: string;
@@ -14,12 +17,12 @@ export interface ITrack {
   cover_url: string;
   lyrics: string;
   bpm: number;
-  genre: TrackFilter;
-  selection: TrackFilter;
-  language: TrackFilter;
-  gender: TrackFilter;
-  mood: TrackFilter;
-  key: TrackFilter;
-  stage: TrackFilter;
-  author: TrackFilter;
+  genre: standartItem[];
+  selection: standartItem[];
+  language: standartItem[];
+  gender: standartItem[];
+  mood: standartItem[];
+  key: standartItem[];
+  stage: standartItem[];
+  author: standartItem[];
 }
