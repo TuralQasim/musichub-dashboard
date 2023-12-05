@@ -35,13 +35,13 @@ const TracksContainer = () => {
                     <td>{a.name}</td>
                     <td>
                       {a.author.map((b) => {
-                        return <span>{b.name}</span>;
+                        return <span key={b.id}>{b.name}</span>;
                       })}
                     </td>
                     <td>{a.bpm}</td>
                     <td>
                       {a.genre.map((b) => {
-                        return <span>{b.name}</span>;
+                        return <span key={b.id}>{b.name}</span>;
                       })}
                     </td>
                     <td className="track_item_btns">

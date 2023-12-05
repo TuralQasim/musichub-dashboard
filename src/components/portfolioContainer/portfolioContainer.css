@@ -1,0 +1,73 @@
+.portfolio_container {
+  width: 100%;
+  
+}
+.portfolio_table {
+  width: 95%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid #fff;
+  border-bottom: 0;
+}
+.portfolio_table thead,
+.portfolio_table tbody {
+  width: 100%;
+  margin-bottom: 0 !important;
+}
+.portfolio_table td {
+  padding: 10px;
+}
+.portfolio_table th {
+  padding: 10px;
+  border-right: none;
+  margin-bottom: 0 !important;
+}
+.portfolio_table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+.portfolio_table th,
+.portfolio_table td {
+  text-align: center;
+  width: calc(100% / 3);
+  border-right: 1px solid #fff;
+}
+.portfolio_table th:last-of-type,
+.portfolio_table td:last-of-type {
+  border-right: 0;
+}
+.portfolio_table th {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+.portfolio_table td {
+  font-size: 18px;
+  color: #000;
+  font-weight: 400;
+}
+.portfolio_item_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.portfolio_item_btns button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.track_item_btns button:hover {
+  color: teal;
+  background-color: #fff;
+}

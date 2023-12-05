@@ -5,7 +5,6 @@ import * as Yup from "yup";
 import axios from "axios";
 import "./loginForm.css";
 import { IAuth } from "../../types/IAuth";
-import { AppDispatch } from "../../store";
 import { setAuth, setUser } from "../../store/slices/authSlice";
 import { useDispatch } from "react-redux";
 
